@@ -16,7 +16,7 @@ if (!isset($_SESSION['usuario_id'])) {
 <body>
 <div class="form-container">
     <h2>Olá, você está autenticado!</h2>
-    <p>A sua sessão está protegida com PHP</p>
+    <p class="success">A sua sessão está protegida com PHP</p>
     <form action="deslogar.php" method="post">
         <button type="submit" class="logout">Sair</button>
     </form>
