@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Text+Me+One&display=swap');
+
+body {
+    font-family: "Text Me One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #2d2c2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+/* CONFIGURAÇÃO DO CARTÃO */
+.container_cartao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90%;
+    max-width: 1200px;
+    padding: 1rem;
+}
+.cartao {
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 6 / 3;
+    border-radius: 10px;
+    padding: 1rem;
+    perspective: 1000px;
+    margin-bottom: 1rem;
+}
+.cartao-conteudo {
+    width: 100%;
+    aspect-ratio: 6 / 3;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.7s;
+}
+.cartao:hover .cartao-conteudo {
+    transform: rotateY(180deg);
+}
+.cartao-frente, .cartao-verso {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.cartao-frente {
+    background: linear-gradient(to bottom, #f5f1f1, #4a4947);
+    box-shadow: 0 4px 8px rgba(251, 251, 238, 0.3);
+    color: #2f2e2e;
+}
+.cartao-verso {
+    position: relative;
+    padding: 20px;
+    background-color: #3e3e3b;
+    box-shadow: 0 4px 8px rgba(251, 251, 238, 0.3);
+    color: white;
+    transform: rotateY(180deg);
+}
+.cartao-frente p {
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.cartao-frente i {
+    font-size: 2rem;
+    color: #6f6c6c;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    transform: rotate(-90deg);
+}   
+.logomarca {
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    top: 150px;
+    left: 0px;
+}
+.esfera {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 145px;
+    margin-left: 287px;
+}
+.escura {
+    background-color: #4e4c4c;
+    left: 0;
+}
+.clara {
+    background-color: #b0afad;
+    left: 35px;
+    mix-blend-mode: multiply;
+}
+
+.cartao-verso span {
+    margin-left: 3px;
+    margin-right: 3px;
+    font-size: 1.6rem;
+}
+.cvv {
+    position: absolute;
+    top: 140px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 25px;
+    background-color: #7e7e7c;
+    color: #000;
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.cvv i {
+    font-size: 0.9rem;
+    color: #444040;
+}
+/* AJUSTES DE RESPONSIVIDADE */
+/* TELAS GRANDES */
+@media (min-width: 1600px) {
+    .cartao-frente p {
+        font-size: 2rem;
+    }
+    .cartao-frente i {
+        font-size: 2.5rem;
+    }
+    .cartao-verso span {
+        font-size: 2rem;
+    }
+    .logomarca {
+        width: 100px;
+        height: 100px;
+        top: 170px;
+    }
+    .esfera {
+        width: 50px;
+        height: 50px;
+        margin-top: 165px;
+        margin-left: 320px;
+    }
+    .cvv {
+        width: 100px;
+        height: 30px;
+        font-size: 1.3rem;
+        line-height: 30px;
+    }
+}
+
+/* DESKTOP's ANTIGOSE TELAS MÉDIAS */
+@media (min-width: 1200px) and (max-width: 1599px) {
+    .cartao-frente p {
+        font-size: 1.6rem;
+    }
+    .cartao-frente i {
+        font-size: 2rem;
+    }
+    .cartao-verso span {
+        font-size: 1.8rem;
+    }
+    .logomarca {
+        width: 75px;
+        height: 75px;
+        top: 160px;
+    }
+    .esfera {
+        width: 50px;
+        height: 50px;
+        margin-top: 155px;
+        margin-left: 300px;
+    }
+    .cvv {
+        width: 90px;
+        height: 28px;
+        font-size: 1.2rem;
+        line-height: 28px;
+    }
+}
+
+/* TABLETS e CELULARES*/
+@media (max-width: 1199px) {
+    .cartao-frente p {
+        font-size: 1.5rem;
+    }
+    .cartao-frente i {
+        font-size: 1.8rem;
+    }
+    .cartao-verso span {
+        font-size: 1.5rem;
+    }
+    .logomarca {
+        width: 72px;
+        height: 72px;
+        top: 160px;
+    }
+    .esfera {
+        width: 45px;
+        height: 45px;
+        margin-top: 165px;
+        margin-left: 295px;
+    }
+    .cvv {
+        width: 75px;
+        height: 24px;
+        font-size: 1rem;
+        line-height: 24px;
+    }
+}
+
+/* CELULARES ANTIGOS OU PEQUENOS */
+@media (max-width: 600px) {
+    .cartao {
+        max-width: 300px;
+    }
+    .cartao-frente p {
+        font-size: 1.1rem;
+    }
+    .cartao-frente i {
+        font-size: 1.5rem;
+        top: 10px;
+        left: 5px;
+    }
+    .cartao-verso span {
+        font-size: 1.2rem;
+    }
+    .logomarca {
+        width: 60px;
+        height: 60px;
+        top: 130px;
+    }
+    .esfera {
+        width: 35px;
+        height: 35px;
+        margin-top: 130px;
+        margin-left: 220px;
+    }
+    .esfera.escura {
+        left: 0;
+    }
+    .esfera.clara {
+        left: 25px;
+    }
+    .cvv {
+        width: 70px;
+        height: 22px;
+        font-size: 0.9rem;
+        line-height: 22px;
+        margin-top: -25px;
+    }
+}
+
