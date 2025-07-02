@@ -110,7 +110,7 @@ body {
    MEDIA QUERIES PARA RESPONSIVIDADE
 ---------------------------- */
 
-/* Tablets (até ~1024px) */
+/* TABLETS (ATÉ 1024px) */
 @media (max-width: 1024px) {
   .carrossel-imagem {
     width: 50vw;
@@ -134,7 +134,7 @@ body {
   }
 }
 
-/* Celulares (até ~768px) */
+/* CELULARES (ATÉ 768px) */
 @media (max-width: 768px) {
   .carrossel {
     height: 60vh;
@@ -169,7 +169,7 @@ body {
   }
 }
 
-/* Celulares muito pequenos (até ~480px) */
+/* CELULARES PEQUENOS (ATÉ 480px) */
 @media (max-width: 480px) {
   .carrossel-imagem {
     width: 70vw;
