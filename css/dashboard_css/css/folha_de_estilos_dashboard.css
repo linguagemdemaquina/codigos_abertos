@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&display=swap');
+body {
+  margin: 0;
+  background-color: #5b5851; 
+  font-family: "Abel", sans-serif;
+  color: #ffffff;  
+}
+
+.logomarca {
+  display: block;
+  margin: auto;
+  max-width: 200px;
+  margin-bottom: 20px; 
+  align-items: center; 
+  justify-content: center;
+}
+
+.dashboard {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  background-color: #5b5851; 
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Abel", sans-serif;
+}
+
+.graficos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  font-family: "Abel", sans-serif;
+}
+
+.grafico-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: "Abel", sans-serif;
+}
+
+canvas {
+  width: 100% !important;
+  height: 350px !important;
+  border-radius: 10px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  font-family: "Abel", sans-serif;
+}
+/* RESPONSIVIDADE */
+@media (max-width: 768px) {
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+.logomarca {
+  max-width: 150px;
+  margin-bottom: 10px;
+} 
+}
+/* FIM RESPONSIVIDADE */
